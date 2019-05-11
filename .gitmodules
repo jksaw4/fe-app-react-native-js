@@ -1,0 +1,6 @@
+[submodule "android"]
+	path = android
+	url = git@github.com:ericson-cepeda/fe-app-react-native-android.git
+[submodule "ios"]
+	path = ios
+	url = git@github.com:ericson-cepeda/fe-app-react-native-ios.git
