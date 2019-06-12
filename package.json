@@ -8,8 +8,6 @@
     "pack": "webpack"
   },
   "dependencies": {
-    "@bit/grommet.grommet.box": "^2.6.5",
-    "@bit/grommet.grommet.data-table": "^2.6.5",
     "@fortawesome/fontawesome-svg-core": "^1.2.18",
     "@fortawesome/free-brands-svg-icons": "^5.8.2",
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
