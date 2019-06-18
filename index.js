@@ -11,8 +11,8 @@ AppRegistry.registerComponent(appName, () => App);
 // index.ios.js
 // index.android.js
 
-import React from 'react';
+// import React from 'react';
 import { AppRegistry } from 'react-native';
-import StppFeReactNative from './app/index';
+import StppFeReactNative from './src/app/index-mobile';
 
 AppRegistry.registerComponent('StppFeReactNative', () => StppFeReactNative);

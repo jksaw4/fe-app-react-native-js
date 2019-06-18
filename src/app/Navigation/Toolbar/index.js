@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, Button } from "react-native";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -34,6 +34,9 @@ class Toolbar extends React.Component {
 
     return (
       <View style={styles.header}>
+        {/* <Button 
+          onPress={activeRoute.name === routes[0].name ? showMenu : goBack} 
+          title="Detail Page" /> */}
         <Icon.ToolbarAndroid
           navIconName={
             activeRoute.name === routes[0].name ? "menu" : "arrow-left"
