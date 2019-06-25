@@ -1,5 +1,6 @@
 import TravelScreen from '../Views/Travel';
 import BookingScreen from '../Views/Booking';
+import Booking1 from '../Views/Booking1';
 import AboutScreen from '../Views/About';
 import CreditsScreen from '../Views/Credits';
 import NativeTilesScreen from '../Views/NativeTiles';
@@ -14,4 +15,5 @@ export default [
   {name: 'About', screen: AboutScreen, icon: 'information-outline'},
   {name: 'Credits', screen: CreditsScreen, icon: 'account-circle'},
   {name: 'NativeTiles', screen: NativeTilesScreen, icon: 'account-circle'},
+  {name: 'Booking1', screen: Booking1, icon: 'account-circle'},
 ];

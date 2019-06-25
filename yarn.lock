@@ -983,7 +983,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.3.4", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
   integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
@@ -1022,335 +1022,6 @@
     esutils "^2.0.2"
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
-
-"@bit/grommet.grommet.announce-context@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.announce-context/-/grommet.grommet.announce-context-2.6.5.tgz#84084142063793c0ff621ee3f6297b663a2cf899"
-  integrity sha1-hAhBQgY3k8D/Yh7j9il7Zjos+Jk=
-  dependencies:
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.box@2.6.5", "@bit/grommet.grommet.box@^2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.box/-/grommet.grommet.box-2.6.5.tgz#55f610d3ad4435fca1c1be8481f6b873a2c687a6"
-  integrity sha1-VfYQ061ENfyhwb6Egfa4c6LGh6Y=
-  dependencies:
-    "@bit/grommet.grommet.internal.contexts.index" "2.6.5"
-    "@bit/grommet.grommet.internal.default-props" "2.6.5"
-    "@bit/grommet.grommet.internal.hocs" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.indexd" "2.6.5"
-    react-desc "^4.1.2"
-    recompose "^0.30.0"
-
-"@bit/grommet.grommet.button@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.button/-/grommet.grommet.button-2.6.5.tgz#f98750ed00638b0e17f62b4bc6b85d20cf9220a0"
-  integrity sha1-+YdQ7QBjiw4X9itLxrhdIM+SIKA=
-  dependencies:
-    "@bit/grommet.grommet.box" "2.6.5"
-    "@bit/grommet.grommet.internal.default-props" "2.6.5"
-    "@bit/grommet.grommet.internal.hocs" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.indexd" "2.6.5"
-    react-desc "^4.1.2"
-    recompose "^0.30.0"
-
-"@bit/grommet.grommet.data-table@^2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.data-table/-/grommet.grommet.data-table-2.6.5.tgz#e967b8a4a9c8e7f2c6224720ae3d6dc9e38f3573"
-  integrity sha1-6We4pKnI5/LGIkcgrj1tyeOPNXM=
-  dependencies:
-    "@bit/grommet.grommet.box" "2.6.5"
-    "@bit/grommet.grommet.button" "2.6.5"
-    "@bit/grommet.grommet.infinite-scroll" "2.6.5"
-    "@bit/grommet.grommet.internal.default-props" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    "@bit/grommet.grommet.keyboard" "2.6.5"
-    "@bit/grommet.grommet.table" "2.6.5"
-    "@bit/grommet.grommet.table-body" "2.6.5"
-    "@bit/grommet.grommet.table-cell" "2.6.5"
-    "@bit/grommet.grommet.table-footer" "2.6.5"
-    "@bit/grommet.grommet.table-header" "2.6.5"
-    "@bit/grommet.grommet.table-row" "2.6.5"
-    "@bit/grommet.grommet.text" "2.6.5"
-    "@bit/grommet.grommet.text-input" "2.6.5"
-    grommet-icons "^4.2.0"
-    react-desc "^4.1.2"
-    recompose "^0.30.0"
-
-"@bit/grommet.grommet.drop@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.drop/-/grommet.grommet.drop-2.6.5.tgz#96e4f5d1122da271833cdecec9ebff1a479d2400"
-  integrity sha1-luT10RItonGDPN7Oyev/GkedJAA=
-  dependencies:
-    "@bit/grommet.grommet.box" "2.6.5"
-    "@bit/grommet.grommet.focused-container" "2.6.5"
-    "@bit/grommet.grommet.internal.contexts.index" "2.6.5"
-    "@bit/grommet.grommet.internal.default-props" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    "@bit/grommet.grommet.keyboard" "2.6.5"
-    "@bit/grommet.grommet.utils.background" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.focused-container@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.focused-container/-/grommet.grommet.focused-container-2.6.5.tgz#4c0495d393cee0a80f6b8873d204c6cf9fbfdf00"
-  integrity sha1-TASV05PO4KgPa4hz0gTGz5+/3wA=
-  dependencies:
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    prop-types "^15.7.2"
-
-"@bit/grommet.grommet.infinite-scroll@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.infinite-scroll/-/grommet.grommet.infinite-scroll-2.6.5.tgz#5e19864f12d0416d258214f1bda553dae6df915b"
-  integrity sha1-XhmGTxLQQW0lghTxvaVT2ubfkVs=
-  dependencies:
-    "@bit/grommet.grommet.box" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.internal.contexts.index@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.internal.contexts.index/-/grommet.grommet.internal.contexts.index-2.6.5.tgz#e96f6edbd05b40085c60eafadb7689d398e8ceae"
-  integrity sha1-6W9u29BbQAhcYOr623aJ05jozq4=
-  dependencies:
-    "@bit/grommet.grommet.announce-context" "2.6.5"
-    "@bit/grommet.grommet.responsive-context" "2.6.5"
-    "@bit/grommet.grommet.theme-context" "2.6.5"
-
-"@bit/grommet.grommet.internal.default-props@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.internal.default-props/-/grommet.grommet.internal.default-props-2.6.5.tgz#57ac3bf95ad5ae92362031a4a0483a9d1ee01aef"
-  integrity sha1-V6w7+VrVrpI2IDGkoEg6nR7gGu8=
-  dependencies:
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    "@bit/grommet.grommet.themes" "2.6.5"
-
-"@bit/grommet.grommet.internal.hocs@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.internal.hocs/-/grommet.grommet.internal.hocs-2.6.5.tgz#11f6691afa7735f57717e418829f97f434ed9287"
-  integrity sha1-EfZpGvp3NfV3F+QYgp+X9DTtkoc=
-  dependencies:
-    "@bit/grommet.grommet.internal.contexts.index" "2.6.5"
-    hoist-non-react-statics "^3.2.0"
-    recompose "^0.30.0"
-
-"@bit/grommet.grommet.internal.utils.index@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.internal.utils.index/-/grommet.grommet.internal.utils.index-2.6.5.tgz#683b235ab606c73cf5df0a44a846ff4ee40aceae"
-  integrity sha1-aDsjWrYGxzz13wpEqEb/TuQKzq4=
-  dependencies:
-    "@bit/grommet.grommet.utils.background" "2.6.5"
-    "@bit/grommet.grommet.utils.colors" "2.6.5"
-    "@bit/grommet.grommet.utils.debounce" "2.6.5"
-    "@bit/grommet.grommet.utils.dom" "2.6.5"
-    "@bit/grommet.grommet.utils.graphics" "2.6.5"
-    "@bit/grommet.grommet.utils.mixins" "2.6.5"
-    "@bit/grommet.grommet.utils.object" "2.6.5"
-    "@bit/grommet.grommet.utils.prop-types" "2.6.5"
-    "@bit/grommet.grommet.utils.responsive" "2.6.5"
-    "@bit/grommet.grommet.utils.router" "2.6.5"
-    "@bit/grommet.grommet.utils.styles" "2.6.5"
-    "@bit/grommet.grommet.utils.theme-doc-utils" "2.6.5"
-    "@bit/grommet.grommet.utils.throttle" "2.6.5"
-
-"@bit/grommet.grommet.internal.utils.indexd@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.internal.utils.indexd/-/grommet.grommet.internal.utils.indexd-2.6.5.tgz#cb8dd2cc29ee033f662ccfe10d0e2af162ffa305"
-  integrity sha1-y43SzCnuAz9mLM/hDQ4q8WL/owU=
-
-"@bit/grommet.grommet.keyboard@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.keyboard/-/grommet.grommet.keyboard-2.6.5.tgz#5bef76b3cf6854e8845e044d9709529c7959c050"
-  integrity sha1-W+92s89oVOiEXgRNlwlSnHlZwFA=
-  dependencies:
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.responsive-context@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.responsive-context/-/grommet.grommet.responsive-context-2.6.5.tgz#eea1d714a54a8314192641e5c01ae70fc614d943"
-  integrity sha1-7qHXFKVKgxQZJkHlwBrnD8YU2UM=
-  dependencies:
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.table-body@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.table-body/-/grommet.grommet.table-body-2.6.5.tgz#f110006988df6105c7fbe5f0a1ed84ee63eb8eec"
-  integrity sha1-8RAAaYjfYQXH++Xwoe2E7mPrjuw=
-  dependencies:
-    "@bit/grommet.grommet.table" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.table-cell@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.table-cell/-/grommet.grommet.table-cell-2.6.5.tgz#c48bdf8d2f1536c8dfd0e15df427048c3e543d74"
-  integrity sha1-xIvfjS8VNsjf0OFd9CcEjD5UPXQ=
-  dependencies:
-    "@bit/grommet.grommet.box" "2.6.5"
-    "@bit/grommet.grommet.internal.default-props" "2.6.5"
-    "@bit/grommet.grommet.table" "2.6.5"
-    react-desc "^4.1.2"
-    recompose "^0.30.0"
-
-"@bit/grommet.grommet.table-footer@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.table-footer/-/grommet.grommet.table-footer-2.6.5.tgz#bfc0c7193d2753ed7953f35ecf57c7494468a7cb"
-  integrity sha1-v8DHGT0nU+15U/Nez1fHSURop8s=
-  dependencies:
-    "@bit/grommet.grommet.table" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.table-header@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.table-header/-/grommet.grommet.table-header-2.6.5.tgz#96c00ec17a130f6168499c0b1024b18dbfcdbebc"
-  integrity sha1-lsAOwXoTD2FoSZwLECSxjb/Nvrw=
-  dependencies:
-    "@bit/grommet.grommet.table" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.table-row@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.table-row/-/grommet.grommet.table-row-2.6.5.tgz#46e27cb918bf3c91782da7eb8aabfcfc2c7e52a3"
-  integrity sha1-RuJ8uRi/PJF4Lafriqv8/Cx+UqM=
-  dependencies:
-    "@bit/grommet.grommet.table" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.table@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.table/-/grommet.grommet.table-2.6.5.tgz#25cbd21dac953d0e8c85a2e71c3cfcc7a6dd0879"
-  integrity sha1-JcvSHayVPQ6MhaLnHDz8x6bdCHk=
-  dependencies:
-    "@bit/grommet.grommet.internal.default-props" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    "@bit/grommet.grommet.utils.theme-doc-utils" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.text-input@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.text-input/-/grommet.grommet.text-input-2.6.5.tgz#1cc7d85c2fdfe57477318f8e6ae8dc1a33fa6fab"
-  integrity sha1-HMfYXC/f5XR3MY+OaujcGjP6b6s=
-  dependencies:
-    "@bit/grommet.grommet.box" "2.6.5"
-    "@bit/grommet.grommet.button" "2.6.5"
-    "@bit/grommet.grommet.drop" "2.6.5"
-    "@bit/grommet.grommet.infinite-scroll" "2.6.5"
-    "@bit/grommet.grommet.internal.default-props" "2.6.5"
-    "@bit/grommet.grommet.internal.hocs" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.indexd" "2.6.5"
-    "@bit/grommet.grommet.keyboard" "2.6.5"
-    grommet-styles "^0.2.0"
-    react-desc "^4.1.2"
-    recompose "^0.30.0"
-
-"@bit/grommet.grommet.text@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.text/-/grommet.grommet.text-2.6.5.tgz#ea8f8c14941a7318b3cc423d01f71de29d7e2f6e"
-  integrity sha1-6o+MFJQacxizzEI9Afcd4p1+L24=
-  dependencies:
-    "@bit/grommet.grommet.internal.default-props" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    "@bit/grommet.grommet.internal.utils.indexd" "2.6.5"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.theme-context@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.theme-context/-/grommet.grommet.theme-context-2.6.5.tgz#10db0d4befe108a3ea3aba8ad1da9a53f1fe7cec"
-  integrity sha1-ENsNS+/hCKPqOrqK0dqaU/H+fOw=
-  dependencies:
-    "@bit/grommet.grommet.internal.utils.index" "2.6.5"
-    prop-types "^15.7.2"
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.themes@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.themes/-/grommet.grommet.themes-2.6.5.tgz#980f36c4fe0fe218b72984a7f36d64a5c8b19382"
-  integrity sha1-mA82xP4P4hi3KYSn821kpcixk4I=
-  dependencies:
-    "@bit/grommet.grommet.internal.utils.indexd" "2.6.5"
-    "@bit/grommet.grommet.utils.colors" "2.6.5"
-    "@bit/grommet.grommet.utils.object" "2.6.5"
-    grommet-icons "^4.2.0"
-    polished "^2.2.0"
-
-"@bit/grommet.grommet.utils.background@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.background/-/grommet.grommet.utils.background-2.6.5.tgz#a29234cb45b825c9dde444c0c11507fa48468f47"
-  integrity sha1-opI0y0W4Jcnd5ETAwRUH+khGj0c=
-  dependencies:
-    "@bit/grommet.grommet.utils.colors" "2.6.5"
-    "@bit/grommet.grommet.utils.styles" "2.6.5"
-
-"@bit/grommet.grommet.utils.colors@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.colors/-/grommet.grommet.utils.colors-2.6.5.tgz#8aa6c28175e5cfd384d650ef8559a236d6fbe5ee"
-  integrity sha1-iqbCgXXlz9OE1lDvhVmiNtb75e4=
-
-"@bit/grommet.grommet.utils.debounce@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.debounce/-/grommet.grommet.utils.debounce-2.6.5.tgz#d73f63cd27dab48c0696a6f4fe85394bb0180d5a"
-  integrity sha1-1z9jzSfatIwGlqb0/oU5S7AYDVo=
-
-"@bit/grommet.grommet.utils.dom@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.dom/-/grommet.grommet.utils.dom-2.6.5.tgz#ad1bd69074131574bbcf22f65fe73dab07af8693"
-  integrity sha1-rRvWkHQTFXS7zyL2X+c9qwevhpM=
-
-"@bit/grommet.grommet.utils.graphics@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.graphics/-/grommet.grommet.utils.graphics-2.6.5.tgz#6619eac372a4f473c88f74406217da3a8f093117"
-  integrity sha1-Zhnqw3Kk9HPIj3RAYhfaOo8JMRc=
-
-"@bit/grommet.grommet.utils.mixins@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.mixins/-/grommet.grommet.utils.mixins-2.6.5.tgz#bd5e5a2934b3971860f8cc3cc5ff52356b3d92ab"
-  integrity sha1-vV5aKTSzlxhg+Mw8xf9SNWs9kqs=
-
-"@bit/grommet.grommet.utils.object@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.object/-/grommet.grommet.utils.object-2.6.5.tgz#86fc79784aff36a6d52653bbb5346c4273819322"
-  integrity sha1-hvx5eEr/NqbVJlO7tTRsQnOBkyI=
-
-"@bit/grommet.grommet.utils.prop-types@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.prop-types/-/grommet.grommet.utils.prop-types-2.6.5.tgz#59ec9d5ce71d6eb4c579f1099a176913ab7ba124"
-  integrity sha1-WeydXOcdbrTFefEJmhdpE6t7oSQ=
-  dependencies:
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.utils.responsive@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.responsive/-/grommet.grommet.utils.responsive-2.6.5.tgz#e0b8ef19685291c95d3849f938ab626313b9dde5"
-  integrity sha1-4LjvGWhSkcldOEn5OKtiYxO53eU=
-
-"@bit/grommet.grommet.utils.router@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.router/-/grommet.grommet.utils.router-2.6.5.tgz#5a8ce0f42bacf8282d6cdf27221f603b54ffd930"
-  integrity sha1-Wozg9Cus+CgtbN8nIh9gO1T/2TA=
-  dependencies:
-    react-desc "^4.1.2"
-
-"@bit/grommet.grommet.utils.styles@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.styles/-/grommet.grommet.utils.styles-2.6.5.tgz#f9b4fcef2e074cf86c64bb268dede95a8194fabd"
-  integrity sha1-+bT87y4HTPhsZLsmje3pWoGU+r0=
-  dependencies:
-    "@bit/grommet.grommet.utils.colors" "2.6.5"
-    "@bit/grommet.grommet.utils.mixins" "2.6.5"
-
-"@bit/grommet.grommet.utils.theme-doc-utils@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.theme-doc-utils/-/grommet.grommet.utils.theme-doc-utils-2.6.5.tgz#5b11f6d1947ca5f53db078b912d3709d2f5fef00"
-  integrity sha1-WxH20ZR8pfU9sHi5EtNwnS9f7wA=
-
-"@bit/grommet.grommet.utils.throttle@2.6.5":
-  version "2.6.5"
-  resolved "https://node.bit.dev/grommet.grommet.utils.throttle/-/grommet.grommet.utils.throttle-2.6.5.tgz#01064da4b9433810c24b36780b96ac0ebe00e296"
-  integrity sha1-AQZNpLlDOBDCSzZ4C5asDr4A4pY=
 
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
@@ -3117,11 +2788,6 @@ chalk@^1.1.1, chalk@^1.1.3:
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
 
-change-emitter@^0.1.2:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/change-emitter/-/change-emitter-0.1.6.tgz#e8b2fe3d7f1ab7d69a32199aff91ea6931409515"
-  integrity sha1-6LL+PX8at9aaMhma/5HqaTFAlRU=
-
 chardet@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
@@ -4880,7 +4546,7 @@ fbjs-scripts@^1.0.0:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.1, fbjs@^0.8.9:
+fbjs@^0.8.9:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -5393,18 +5059,6 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.3
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
 
-grommet-icons@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/grommet-icons/-/grommet-icons-4.2.0.tgz#7bcf7d4b37f694516ade084e2536c72b224c6a76"
-  integrity sha512-HMPLQa2pgnCZFImUXwfq+79VizL6oyP2/AAfAzQDw57x/6qgWouoqoRrrt+2zodTjTxtKXxliBY1w/o5uC+DpA==
-  dependencies:
-    grommet-styles "^0.2.0"
-
-grommet-styles@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/grommet-styles/-/grommet-styles-0.2.0.tgz#b2eac2b7e2747cb523434d21728ce5234f8ce4f4"
-  integrity sha512-0OMSYuGeyifYKpg4Gv2HzL8rUdd0ddnJ5LbCBKgDuloC71XIwr9g/Fxa6rs737MbPV7OZ4pEm4wvrjH4epzf1A==
-
 growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
@@ -5578,7 +5232,7 @@ hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
   integrity sha512-rqcy4pJo55FTTLWt+bU8ukscqHeE/e9KWvsOW2b/a3afxQZhwkQdT1rPPCJ0rYXdj4vNcasY8zHTH+jF/qStxw==
 
-hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.0, hoist-non-react-statics@^3.3.0:
+hoist-non-react-statics@^3.0.1, hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.0.tgz#b09178f0122184fb95acf525daaecb4d8f45958b"
   integrity sha512-0XsbTXxgiaCDYDIWFcwkmerZPSwywfUqYmwT4jzewKTQSWoE6FCMoUVOeBJWK3E/CrWbxRG3m5GzY4lnIwGRBA==
@@ -6398,7 +6052,7 @@ jest-changed-files@^24.8.0:
     execa "^1.0.0"
     throat "^4.0.0"
 
-jest-cli@^24.7.1:
+jest-cli@^24.7.1, jest-cli@^24.8.0:
   version "24.8.0"
   resolved "https://registry.yarnpkg.com/jest-cli/-/jest-cli-24.8.0.tgz#b075ac914492ed114fa338ade7362a301693e989"
   integrity sha512-+p6J00jSMPQ116ZLlHJJvdf8wbjNbZdeSX9ptfHX06/MSNaXmKihQzx5vQcw0q2G6JsdVkUIdWbOWtSnaYs3yA==
@@ -6797,6 +6451,14 @@ jest@24.7.1:
   dependencies:
     import-local "^2.0.0"
     jest-cli "^24.7.1"
+
+jest@24.8.0:
+  version "24.8.0"
+  resolved "https://registry.yarnpkg.com/jest/-/jest-24.8.0.tgz#d5dff1984d0d1002196e9b7f12f75af1b2809081"
+  integrity sha512-o0HM90RKFRNWmAWvlyV8i5jGZ97pFwkeVoGvPW1EtLTgJc2+jcuqcbbqcSZLE/3f2S5pt0y2ZBETuhpWNl1Reg==
+  dependencies:
+    import-local "^2.0.0"
+    jest-cli "^24.8.0"
 
 js-levenshtein@^1.1.3:
   version "1.1.6"
@@ -8878,13 +8540,6 @@ pnp-webpack-plugin@1.2.1:
   dependencies:
     ts-pnp "^1.0.0"
 
-polished@^2.2.0:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/polished/-/polished-2.3.3.tgz#bdbaba962ba8271b0e11aa287f2befd4c87be99a"
-  integrity sha512-59V4fDbdxtH4I1m9TWxFsoGJbC8nnOpUYo5uFmvMfKp9Qh+6suo4VMUle1TGIIUZIGxfkW+Rs485zPk0wcwR2Q==
-  dependencies:
-    "@babel/runtime" "^7.2.0"
-
 portfinder@^1.0.9:
   version "1.0.20"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.20.tgz#bea68632e54b2e13ab7b0c4775e9b41bf270e44a"
@@ -9846,11 +9501,6 @@ react-deep-force-update@^1.0.0:
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.1.2.tgz#3d2ae45c2c9040cbb1772be52f8ea1ade6ca2ee1"
   integrity sha512-WUSQJ4P/wWcusaH+zZmbECOk7H5N2pOIl0vzheeornkIMhu+qrNdGFm0bDZLCb0hSF0jf/kH1SgkNGfBdTc4wA==
 
-react-desc@^4.1.2:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/react-desc/-/react-desc-4.1.2.tgz#83fc4ede66b2d45ae4ef63c18421474d55972966"
-  integrity sha512-JAVe89uaLr0HZ0IKodnpTPNgNyJ/SPDQnl3VJPVwI+SpebmHvJiBNZEOwX201QmSbsVGqRY8ql/VFPlAx85WzA==
-
 react-dev-utils@^9.0.1:
   version "9.0.1"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-9.0.1.tgz#5c03d85a0b2537d0c46af7165c24a7dfb274bef2"
@@ -9910,7 +9560,7 @@ react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.3, react-is@^16.8.4, react-is
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
-react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
+react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
@@ -10291,18 +9941,6 @@ realpath-native@^1.1.0:
   integrity sha512-wlgPA6cCIIg9gKz0fgAPjnzh4yR/LnXovwuo9hvyGvx3h8nX4+/iLZplfUWasXpqD8BdnGnP5njOFjkUwPzvjA==
   dependencies:
     util.promisify "^1.0.0"
-
-recompose@^0.30.0:
-  version "0.30.0"
-  resolved "https://registry.yarnpkg.com/recompose/-/recompose-0.30.0.tgz#82773641b3927e8c7d24a0d87d65aeeba18aabd0"
-  integrity sha512-ZTrzzUDa9AqUIhRk4KmVFihH0rapdCSMFXjhHbNrjAWxBuUD/guYlyysMnuHjlZC/KRiOKRtB4jf96yYSkKE8w==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    change-emitter "^0.1.2"
-    fbjs "^0.8.1"
-    hoist-non-react-statics "^2.3.1"
-    react-lifecycles-compat "^3.0.2"
-    symbol-observable "^1.0.4"
 
 recursive-readdir@2.2.2:
   version "2.2.2"
@@ -11388,7 +11026,7 @@ svgo@^1.0.0, svgo@^1.2.1:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-symbol-observable@^1.0.4, symbol-observable@^1.2.0:
+symbol-observable@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
   integrity sha512-e900nM8RRtGhlV36KGEU9k65K3mPb1WV70OdjfxlG2EAuM1noi/E/BaW/uMhL7bPEssK8QV57vN3esixjUvcXQ==

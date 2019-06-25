@@ -43,6 +43,8 @@ class NavTabs extends React.Component {
           <FontAwesomeIcon name="Credits" icon={['fas', 'user']} />
           <FontAwesomeIcon name="Booking" icon={['fas', 'plane']} />
           <FontAwesomeIcon name="NativeTiles" icon={['fas', 'plane']} />
+          <FontAwesomeIcon name="Booking1" icon={['fas', 'plane']} />
+
       </Tabs>
     );
   }
