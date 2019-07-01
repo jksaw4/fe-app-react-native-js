@@ -1,39 +1,49 @@
 import React, { Component }  from 'react';
+//import { Stitch, AnonymousCredential } from 'mongodb-stitch-react-native-sdk';
+//import RemoteMongoClient from 'mongodb-stitch-react-native-services-mongodb-remote';
 import { Stitch, AnonymousCredential } from 'mongodb-stitch-react-native-sdk';
-import RemoteMongoClient from 'mongodb-stitch-react-native-services-mongodb-remote';
 import { connect } from 'react-redux';
 import {
     ScrollView,
     Text,
-    StyleSheet
+    StyleSheet,
+    TextInput
   } from 'react-native';
   import { Button } from 'react-native';
+  import  fetchdatabasestate from '../Redux/actions';
+  //import SearchData from './SearchData';
 //import "./App.css";
 
 
-const Booking1 = ({ activeRoute }) => (
-    <ScrollView contentContainerStyle={styles.view}>
-      <Text style={styles.header1}>{activeRoute.name}</Text>
-      <Text style={styles.text}>Welcome! Here you can book your next trip!!</Text>
-    </ScrollView>
-  );
-    
-    const client = Stitch.initializeDefaultAppClient('todotutorial-cnnqb')
-    
-    
-    const db = client.getServiceClient(RemoteMongoClient.factory,'mongodb-atlas').db('todo');
-  
-    client.auth.loginWithCredential(new AnonymousCredential()).then(user =>
-      db.collection('item').updateOne({owner_id: client.auth.user.id}, {$set:{number:42}}, {upsert:true})
-    ).then(() =>
-      db.collection('item').find({owner_id: client.auth.user.id}, { limit: 100}).asArray()
-    ).then(docs => {
-        console.log("Found docs", docs)
-        console.log("[MongoDB Stitch] Connected to Stitch")
-    }).catch(err => {
-        console.error(err)
-    });
 
+class Booking1 extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { text: 'London' };
+  }
+
+  render() {
+    return (
+      <ScrollView contentContainerStyle={styles.view}>
+      <Text style={styles.text}>Welcome! Here you can book your next trip!!</Text>
+      <TextInput
+        style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+        onChangeText={(text) => this.setState({text})}
+        value={this.state.text}
+      />
+      <Button
+            title="Book your tickets here"
+            style={styles.button}
+            onPress= {fetchdatabasestate()}
+          />
+    </ScrollView>  
+    );
+  }
+}
+
+
+
+  
   const styles = StyleSheet.create({
     view: {
       flex: 1,
