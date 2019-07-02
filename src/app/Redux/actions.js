@@ -2,6 +2,12 @@ export const NAVIGATE_TO = 'NAVIGATE_TO';
 export const GO_BACK = 'GO_BACK';
 export const SET_NAVIGATOR = 'SET_NAVIGATOR';
 export const SET_ACTIVE_ROUTE = 'SET_ACTIVE_ROUTE';
+export const FETCH_DATABASE_DATA = 'FETCH_DATABASE_DATA';
+export const FETCH_DATABASE_DATA_SUCCESS = 'FETCH_DATABASE_DATA_SUCCESS';
+export const FETCH_DATABASE_DATA_FAILURE = 'FETCH_DATABASE_DATA_FAILURE';
+export const WRITE_DATABASE_STATE = 'WRITE_DATABASE_STATE';
+export const WRITE_DATABASE_DATA_SUCCESS = 'WRITE_DATABASE_DATA_SUCCESS';
+export const WRITE_DATABASE_DATA_FAILURE = 'WRITE_DATABASE_DATA_FAILURE';
 import dbclient from './reducers/dbcon';
 
 
@@ -24,8 +30,8 @@ export const setActiveRoute = activeRouteName => ({
   activeRouteName,
 });
 
-export function fetchdatabasedata(args) {  
-  this.db = dbclient;
+export function fetchdatabasedata() {  
+  this.db = dbclient.db("todo");
 	return async (dispatch) => {    
         // Initiate loading state    
         dispatch({      
@@ -59,21 +65,19 @@ export function fetchdatabasedata(args) {
     };
 }
 
-export function fetchdatabasestate(event) {  
-  this.db = dbclient;
+export function fetchdatabasestate() {  
+  this.db = dbclient.db("todo");
   //event.preventDefault();
   const { value } = this.state;
 	return async (dispatch) => {    
         // Initiate loading state    
         dispatch({      
-            type: FETCH_DATABASE_STATE    
+            type: WRITE_DATABASE_STATE    
         });
         try {      
             // Call the API      
            // const collection = this.state.db.collection("item");
             const result = await fetchdatabasestate(
-              //event.preventDefault();
-              //const { value } = this.state;
               // insert the todo into the remote Stitch DB
               // then re-query the DB and display the new todos
               this.db
@@ -82,7 +86,7 @@ export function fetchdatabasestate(event) {
                   owner_id: this.client.auth.user.id,
                   item: value
                 })
-                .then(this.fetchdatabasedata) 
+               // .then(this.fetchdatabasedata) 
             );
                  
                   

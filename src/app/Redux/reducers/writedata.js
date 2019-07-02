@@ -4,7 +4,7 @@ const initialState = {  payload: [],  isLoading: false,  error: {}};
 
 export function writedatareducer( state=initialState, action ) { 	 
     switch(action.type) {    
-        case Type.FETCH_DATABASE_STATE:      
+        case Type.C_DATABASE_DATA:      
             return {        
                 	...state,        
                     isLoading: true    

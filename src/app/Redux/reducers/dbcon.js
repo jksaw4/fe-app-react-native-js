@@ -17,7 +17,7 @@ const MongoDB = require('mongodb-stitch-react-native-services-mongodb-remote');
 
 
 Stitch.initializeDefaultAppClient('todotutorial-cnnqb').then(client => {
-  const dbClient = client.getServiceClient(MongoDB.RemoteMongoClient.factory, "mongodb-atlas").db('todo');
+  const dbClient = client.getServiceClient(MongoDB.RemoteMongoClient.factory, "mongodb-atlas");
 
   client.auth.loginWithCredential(new AnonymousCredential()).then(() => {
       console.log("[MongoDB Stitch] Connected to Stitch")

@@ -10,7 +10,7 @@ import {
     TextInput
   } from 'react-native';
   import { Button } from 'react-native';
-  import  fetchdatabasestate from '../Redux/actions';
+  import  writedatareducer from '../Redux/reducers/writedata';
   //import SearchData from './SearchData';
 //import "./App.css";
 
@@ -34,7 +34,7 @@ class Booking1 extends Component {
       <Button
             title="Book your tickets here"
             style={styles.button}
-            onPress= {fetchdatabasestate()}
+            onPress= {() => writedatareducer()}
           />
     </ScrollView>  
     );
