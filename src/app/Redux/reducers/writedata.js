@@ -1,26 +1,28 @@
-import * as Type from '../actions';
+import { COMPONENT_DID_MOUNT,ADD_DATA } from "../actions/"
+
+
 
 const initialState = {  payload: [],  isLoading: false,  error: {}};
 
 export function writedatareducer( state=initialState, action ) { 	 
     switch(action.type) {    
-        case Type.C_DATABASE_DATA:      
+        case COMPONENT_DID_MOUNT:      
             return {        
                 	...state,        
                     isLoading: true    
             };        
-        case Type.WRITE_DATABASE_DATA_SUCCESS:      
+        case ADD_DATA:      
             return {        
 	                ...state,        
                     payload: action.payload,        
                     isLoading: false      
                    };        
-        case Type.WRITE_DATABASE_DATA_FAILURE:      
+      /* case WRITE_DATABASE_DATA_FAILURE:      
             return {        
 	                ...state,        
                     error: action.error,        
                     isLoading: false            
-            };
+            };*/
             
                 
         //case RESET_DATABASE_DATA_DATA:      

@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import { Stitch, AnonymousCredential } from 'mongodb-stitch-react-native-sdk';
 import loaddatareducer from './loaddata';
 import writedatareducer from './writedata';
 
@@ -12,11 +11,12 @@ const dbcon = combineReducers({
     //updatedata: updatedatareducer
 });
 
+/*
+import { Stitch, AnonymousCredential } from 'mongodb-stitch-react-native-sdk';
 const MongoDB = require('mongodb-stitch-react-native-services-mongodb-remote');
 
 
-
-Stitch.initializeDefaultAppClient('todotutorial-cnnqb').then(client => {
+Stitch.initializeDefaultAppClient('stepp-app-beta-app-be-stitch-niyfx').then(client => {
   const dbClient = client.getServiceClient(MongoDB.RemoteMongoClient.factory, "mongodb-atlas");
 
   client.auth.loginWithCredential(new AnonymousCredential()).then(() => {
@@ -24,7 +24,7 @@ Stitch.initializeDefaultAppClient('todotutorial-cnnqb').then(client => {
   }).catch(err => {
       console.error(err)
   });
-});
+});*/
 
 export default dbcon;
 

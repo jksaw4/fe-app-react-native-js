@@ -4,6 +4,7 @@ import {
   Text,
   StyleSheet
 } from 'react-native';
+import { Stitch, AnonymousCredential } from 'mongodb-stitch-react-native-sdk';
 import { connect } from 'react-redux';
 
 const Booking = ({ activeRoute }) => (
@@ -12,6 +13,7 @@ const Booking = ({ activeRoute }) => (
     <Text style={styles.text}>Welcome! Here you can book your next trip!!</Text>
   </ScrollView>
 );
+
 
 const styles = StyleSheet.create({
   view: {
