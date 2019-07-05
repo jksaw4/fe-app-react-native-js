@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 import routes from './routes';
-import dbcon from './dbcon';
+import postReducer from './dbcon';
 
 
 const rootReducer = combineReducers({
   routes,
-  dbcon,
+  postReducer,
 });
 
 export default rootReducer;

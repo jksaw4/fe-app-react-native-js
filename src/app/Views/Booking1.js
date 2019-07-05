@@ -1,5 +1,4 @@
 import React, { Component }  from 'react';
-import { Stitch, AnonymousCredential } from 'mongodb-stitch-react-native-sdk';
 import { connect } from 'react-redux';
 import {
     ScrollView,
@@ -7,26 +6,60 @@ import {
     StyleSheet,
     TextInput,
   } from 'react-native';
-  import { addTodo, displayTodos } from '../Redux/actions';
 import { Button } from 'react-native-elements';
+import DB from '../config/db';
+import {createPost,fetchAllPosts} from '../Redux/actions'
 
-
-
+var db1 = new DB();
+var collection = "todo-item";
 
 class Booking1 extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      //data: (props.edit) ? props.data.data : "" 
       todos: [],
       value: ""
     };
-    //this.adddata = this.adddata.bind(this);
     this.handleChangeText = this.handleChangeText.bind(this);
-   // this.displayTodos = this.displayTodos.bind(this);
-    //this.addTodo = this.addTodo.bind(this);
-    
+    this.handleSubmit = this.handleSubmit.bind(this);
+     db1.componentDidMount()
+   
   }
+  
+
+  /*addTodo(event){
+      event.preventDefault();
+      const { value } = this.state;
+      db
+      .collection(collection)
+      .insertOne({
+      owner_id: "123",
+      item: value
+    })
+    .then(this.displayTodos)
+    .catch(console.error);
+  }*/
+  /*
+  displayTodos() {
+    // query the remote DB and update the component state
+      db
+      .collection(collection)
+      .find({}, { limit: 1000 })
+      .asArray()
+      .then(todos => {
+        this.setState({todos});
+      });
+      //dispatch({type: DISPLAY_DATA, todos});
+  }*/
+
+
+handleSubmit = event => {
+   event.preventDefault();
+   const { value } = this.state;
+   this.props.onAddPost(value)
+   .then(fetchAllPosts)
+    .catch(console.error);
+  };
 
 handleChangeText(event) {
   this.setState({
@@ -43,8 +76,10 @@ render(){
                         style={[styles.title]}
                         defaultValue={this.state.value}
                     />
-                    <Button title = 'Add to db' onPress = {addTodo}/>
-        
+                    <Button title = 'Add to db' onPress = {this.handleSubmit}/>
+                    {this.state.todos.map(todo => {
+                      return <Text>{todo.item}</Text>;
+                      })}
   </ScrollView>
   );
 }
@@ -72,13 +107,17 @@ const styles = StyleSheet.create({
     },
   });
 
-  
+  const mapDispatchToProps = dispatch => {
+    return {
+      onAddPost: () => {
+        dispatch(createPost());
+      }
+    };
+  };
   
   export default connect(
-    addTodo,
+    mapDispatchToProps,
   )(Booking1);
-
-  //  export default connect(null, {addQuote, updateQuote})(NewQuote);
   
   
   
