@@ -28,7 +28,7 @@ export const setActiveRoute = activeRouteName => ({
   activeRouteName,
 });
 
-export const createPost = () => {
+export const createPost = (value) => {
   return (dispatch) => {
     return db
     .collection(collection)
@@ -42,12 +42,12 @@ export const createPost = () => {
   }
 };
 
-export const createPostSuccess =  (data) => {
+export const createPostSuccess =  () => {
   return {
     type: ADD_POST,
     payload: {
       owner_id: "123",
-      item: data.value
+      item: "123"
     }
   }
 };

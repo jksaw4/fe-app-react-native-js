@@ -8,7 +8,7 @@ import {
   } from 'react-native';
 import { Button } from 'react-native-elements';
 import DB from '../config/db';
-import {createPost,fetchAllPosts} from '../Redux/actions'
+import {createPost,fetchAllPosts,createPostSuccess} from '../Redux/actions'
 
 var db1 = new DB();
 var collection = "todo-item";
@@ -110,7 +110,17 @@ const styles = StyleSheet.create({
   const mapDispatchToProps = dispatch => {
     return {
       onAddPost: () => {
-        dispatch(createPost());
+        dispatch( 
+          db
+          .collection(collection)
+          .insertOne({
+            owner_id: "123",
+            item: "1234"
+          }).then(dispatch(createPostSuccess()))
+          .catch(error => {
+            throw(error);
+          })
+        );
       }
     };
   };
