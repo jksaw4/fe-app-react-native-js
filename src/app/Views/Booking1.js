@@ -8,10 +8,12 @@ import {
   } from 'react-native';
 import { Button } from 'react-native-elements';
 import DB from '../config/db';
-import {createPost,fetchAllPosts,createPostSuccess} from '../Redux/actions'
+import {createPost,fetchAllPosts} from '../Redux/actions'
+
 
 var db1 = new DB();
 var collection = "todo-item";
+var onAddPost;
 
 class Booking1 extends Component {
   constructor(props) {
@@ -21,7 +23,7 @@ class Booking1 extends Component {
       value: ""
     };
     this.handleChangeText = this.handleChangeText.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+  //  this.handleSubmit = this.handleSubmit.bind(this);
      db1.componentDidMount()
    
   }
@@ -39,7 +41,7 @@ class Booking1 extends Component {
     .then(this.displayTodos)
     .catch(console.error);
   }*/
-  /*
+  
   displayTodos() {
     // query the remote DB and update the component state
       db
@@ -50,15 +52,15 @@ class Booking1 extends Component {
         this.setState({todos});
       });
       //dispatch({type: DISPLAY_DATA, todos});
-  }*/
+  }
 
 
 handleSubmit = event => {
    event.preventDefault();
    const { value } = this.state;
-   this.props.onAddPost(value)
-   .then(fetchAllPosts)
-    .catch(console.error);
+   this.props.onAddPost(value);
+   this.displayTodos();
+   // .catch(console.error);
   };
 
 handleChangeText(event) {
@@ -107,25 +109,19 @@ const styles = StyleSheet.create({
     },
   });
 
-  const mapDispatchToProps = dispatch => {
+  const mapDispatchToProps = (dispatch) => {
     return {
-      onAddPost: () => {
-        dispatch( 
-          db
-          .collection(collection)
-          .insertOne({
-            owner_id: "123",
-            item: "1234"
-          }).then(dispatch(createPostSuccess()))
-          .catch(error => {
-            throw(error);
-          })
-        );
+      onAddPost: (value) => {
+        return function action(dispatch) {
+          dispatch(createPost(value));
+        }
       }
     };
   };
-  
+
+
   export default connect(
+    null,
     mapDispatchToProps,
   )(Booking1);
   

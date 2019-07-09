@@ -2,7 +2,7 @@ export const NAVIGATE_TO = 'NAVIGATE_TO';
 export const GO_BACK = 'GO_BACK';
 export const SET_NAVIGATOR = 'SET_NAVIGATOR';
 export const SET_ACTIVE_ROUTE = 'SET_ACTIVE_ROUTE';
-export const ADD_POST = 'ADD_DATA';
+export const ADD_POST = 'ADD_POST';
 export const FETCH_POST = 'FETCH_POST';
 
 import DB from '../config/db';
@@ -28,14 +28,14 @@ export const setActiveRoute = activeRouteName => ({
   activeRouteName,
 });
 
-export const createPost = (value) => {
+export const createPost = () => {
   return (dispatch) => {
     return db
     .collection(collection)
     .insertOne({
       owner_id: "123",
-      item: value
-    }).then(dispatch(createPostSuccess(data)))
+      item: "!23456"
+    }).then(dispatch(createPostSuccess()))
     .catch(error => {
       throw(error);
     });
@@ -47,7 +47,7 @@ export const createPostSuccess =  () => {
     type: ADD_POST,
     payload: {
       owner_id: "123",
-      item: "123"
+      item: "56789"
     }
   }
 };
