@@ -6,8 +6,13 @@ export const ADD_POST = 'ADD_POST';
 export const FETCH_POST = 'FETCH_POST';
 
 import DB from '../config/db';
+import axios from 'axios';
 
 var db1 = new DB();
+
+const apigetUrl = 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/todotutorial-cnnqb/service/getdata/incoming_webhook/webhook0';
+const apipostUrl = 'https://webhooks.mongodb-stitch.com/api/client/v2.0/app/todotutorial-cnnqb/service/postdata/incoming_webhook/webhook1';
+                    
 
 export const navigateTo = routeName => ({
   type: NAVIGATE_TO,
@@ -28,29 +33,30 @@ export const setActiveRoute = activeRouteName => ({
   activeRouteName,
 });
 
-export const createPost = () => {
+export const createPost = ({ item }) => {
   return (dispatch) => {
-    return db
-    .collection(collection)
-    .insertOne({
-      owner_id: "123",
-      item: "!23456"
-    }).then(dispatch(createPostSuccess()))
-    .catch(error => {
-      throw(error);
-    });
-  }
+    return axios.post(`${apipostUrl}`,{item})
+      .then(response => {
+        dispatch(createPostSuccess(response.data))
+      })
+      .catch(error => {
+        throw(error);
+      });
+  };
 };
 
-export const createPostSuccess =  () => {
+
+export const createPostSuccess =  (data) => {
   return {
     type: ADD_POST,
     payload: {
       owner_id: "123",
-      item: "56789"
+      item: data.item
     }
   }
+  //console.log(data.item)
 };
+
 
 export const fetchPosts = (posts) => {
   return {
@@ -61,18 +67,12 @@ export const fetchPosts = (posts) => {
 
 export const fetchAllPosts = () => {
   return (dispatch) => {
-    return db
-    .collection(collection)
-    .find({}, { limit: 1000 })
-    .asArray() 
-    .then(todos => {
-      this.setState({todos})
+    return axios.get(apigetUrl)
       .then(response => {
         dispatch(fetchPosts(response.data))
       })
       .catch(error => {
         throw(error);
       });
-  });
-}
+  };
 };

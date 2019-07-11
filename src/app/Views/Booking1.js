@@ -8,7 +8,7 @@ import {
   } from 'react-native';
 import { Button } from 'react-native-elements';
 import DB from '../config/db';
-import {createPost,fetchAllPosts} from '../Redux/actions'
+import {createPost,fetchAllPosts} from '../Redux/actions';
 
 
 var db1 = new DB();
@@ -23,19 +23,21 @@ class Booking1 extends Component {
       value: ""
     };
     this.handleChangeText = this.handleChangeText.bind(this);
-  //  this.handleSubmit = this.handleSubmit.bind(this);
-     db1.componentDidMount()
+    this.handleSubmit = this.handleSubmit.bind(this);
+   // this.addTodo = this.addTodo.bind(this);
+    this.displayTodos = this.displayTodos.bind(this);
+    db1.componentDidMount()
    
   }
   
-
-  /*addTodo(event){
+/*
+  addTodo(event){
       event.preventDefault();
       const { value } = this.state;
       db
       .collection(collection)
       .insertOne({
-      owner_id: "123",
+      owner_id: "123"this.client.auth.user.id,
       item: value
     })
     .then(this.displayTodos)
@@ -44,29 +46,43 @@ class Booking1 extends Component {
   
   displayTodos() {
     // query the remote DB and update the component state
-      db
-      .collection(collection)
-      .find({}, { limit: 1000 })
-      .asArray()
-      .then(todos => {
-        this.setState({todos});
-      });
+    console.log("5------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+      this.props.FetchOnPost();
+    console.log("6------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+      todos => {
+      this.setState({todos});
+      };
+    console.log("7------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")   
       //dispatch({type: DISPLAY_DATA, todos});
   }
 
+  handleChangeText(event) {
+    this.setState({
+      item: event});
+  }
 
+  handleSubmit = event => {
+    event.preventDefault();
+    const { item } = this.state;
+      this.props.onAddPost(item);
+     this.displayTodos();
+    //  this.props.fetchAllPosts();
+  };
+
+
+/*
 handleSubmit = event => {
    event.preventDefault();
    const { value } = this.state;
+   console.log("3------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
    this.props.onAddPost(value);
+   console.log("4------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
    this.displayTodos();
    // .catch(console.error);
-  };
+};*/
 
-handleChangeText(event) {
-  this.setState({
-      value: event});
-}
+
+
 
 render(){
   return(
@@ -79,9 +95,7 @@ render(){
                         defaultValue={this.state.value}
                     />
                     <Button title = 'Add to db' onPress = {this.handleSubmit}/>
-                    {this.state.todos.map(todo => {
-                      return <Text>{todo.item}</Text>;
-                      })}
+                   <Text>{this.displayTodos}</Text>
   </ScrollView>
   );
 }
@@ -109,19 +123,42 @@ const styles = StyleSheet.create({
     },
   });
 
-  const mapDispatchToProps = (dispatch) => {
+  /*const mapDispatchToProps = (dispatch) => {
+    console.log("1------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")    
+    return{
+      onAddPost: (value) =>{
+        console.log("2------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        dispatch(createPost(value));
+    
+      }
+    }
+  };*/
+
+  const mapStateToProps = state =>{
+    return{
+      todos:state
+    };
+  };
+
+
+  const mapDispatchToProps = dispatch => {
     return {
-      onAddPost: (value) => {
-        return function action(dispatch) {
-          dispatch(createPost(value));
-        }
+      onAddPost: post => {
+        console.log("1------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        dispatch(createPost(post));
+        console.log("2------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+      },
+      FetchOnPost: () => {
+        console.log("3------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        dispatch(fetchAllPosts());
+        console.log("4------------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
       }
     };
   };
 
 
   export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps,
   )(Booking1);
   

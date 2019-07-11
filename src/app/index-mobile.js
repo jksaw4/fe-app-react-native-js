@@ -18,10 +18,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-
-import { createStore } from 'redux';
+import Booking1 from '../app/Views/Booking1';
 import { Provider } from 'react-redux';
-import reducer from './Redux/reducers';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import rootReducer from './Redux/reducers';
 import { setNavigator, setActiveRoute } from "./Redux/actions";
 import DrawerContent from './Navigation/DrawerContent';
 import Toolbar from './Navigation/Toolbar';
@@ -29,7 +30,8 @@ import AppNavigation from './Navigation/AppNavigation';
 
 import { bgStatusBar, bgDrawer } from './global.styles';
 
-let store = createStore(reducer);
+let store = createStore(rootReducer, applyMiddleware(thunk));
+
 
 const getDrawerWidth = () => 600 //Dimensions.get('window').width - (Platform.OS === 'android' ? 56 : 64);
 
