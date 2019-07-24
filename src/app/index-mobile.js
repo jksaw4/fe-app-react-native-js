@@ -27,6 +27,7 @@ import { setNavigator, setActiveRoute } from "./Redux/actions";
 import DrawerContent from './Navigation/DrawerContent';
 import Toolbar from './Navigation/Toolbar';
 import AppNavigation from './Navigation/AppNavigation';
+import { fetchAllPosts } from '../app/Redux/actions'
 
 import { bgStatusBar, bgDrawer } from './global.styles';
 
@@ -34,7 +35,7 @@ let store = createStore(rootReducer, applyMiddleware(thunk));
 
 
 const getDrawerWidth = () => 600 //Dimensions.get('window').width - (Platform.OS === 'android' ? 56 : 64);
-
+//store.dispatch(fetchAllPosts());
 
 library.add(fas, fab)
 
@@ -52,6 +53,7 @@ export default class CodeSharing extends Component {
 
   componentDidMount() {
     store.dispatch(setNavigator(this.navigator.current));
+
   }
 
   openDrawer = () => {

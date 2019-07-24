@@ -3,7 +3,7 @@ import { View, StyleSheet, Text } from "react-native";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { goBack, navigateTo } from "../../Redux/actions";
-import { bgHeader } from "../../global.styles";
+//import { bgHeader } from "../../global.styles";
 
 import Tabs from 'react-native-tabs';
 
@@ -38,24 +38,24 @@ class NavTabs extends React.Component {
         selectedStyle={{color:'gray'}} 
         onSelect={el => this.onActionSelected(el.props.name)}
       >
-          <FontAwesomeIcon name="Travel" icon={['fas', 'home']} />
+          <FontAwesomeIcon name="Travel" icon={['fas', 'route']} />
           <FontAwesomeIcon name="About" icon={['fas', 'route']} />
-          <FontAwesomeIcon name="Credits" icon={['fas', 'user']} />
-          <FontAwesomeIcon name="Booking" icon={['fas', 'plane']} />
+          <FontAwesomeIcon name="ListJourney" icon={['fas', 'user']} />
+        <FontAwesomeIcon name="ViewJourney" icon={['fas', 'plane']} />
           <FontAwesomeIcon name="NativeTiles" icon={['fas', 'plane']} />
           <FontAwesomeIcon name="Booking1" icon={['fas', 'plane']} />
-
+          
       </Tabs>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  header: {
+  /*header: {
     backgroundColor: bgHeader,
     height: 80, // 56dp AppBar height plus 24dp correction for the StatusBar translucent
     paddingTop: 24 // StatusBar's height
-  },
+  },*/
   tabbar: {
     backgroundColor:'white',
     height: 64,
